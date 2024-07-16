@@ -20,33 +20,60 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageListCell" rowHeight="200" id="Cee-A9-hPH" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="224" id="Cee-A9-hPH" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cee-A9-hPH" id="6R8-TP-6bQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5z-RT-6cy" userLabel="likeButton">
-                                                    <rect key="frame" x="297" y="-5" width="66" height="56"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <inset key="contentEdgeInsets" minX="44" minY="44" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="Active"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Tw-f7F" userLabel="cellImage">
+                                                    <rect key="frame" x="16" y="4" width="361" height="216"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="361" id="uiM-Er-vhn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5z-RT-6cy" userLabel="likeButton">
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="1Wo-aG-IiO"/>
+                                                        <constraint firstAttribute="width" constant="44" id="iuS-Df-ahW"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="" image="like_button_on"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="like_button_on" title=""/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26 октября 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-YM-lIC">
-                                                    <rect key="frame" x="175" y="11" width="106" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 октября 2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-YM-lIC" userLabel="dateLabel">
+                                                    <rect key="frame" x="31.999999999999993" y="196" width="100.33333333333331" height="16"/>
+                                                    <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Tw-f7F" userLabel="cellImage">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="trailing" secondItem="n5z-RT-6cy" secondAttribute="trailing" id="92N-7c-O8y"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="top" secondItem="6R8-TP-6bQ" secondAttribute="topMargin" constant="-7" id="Tvd-8d-t3p"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J7f-YM-lIC" secondAttribute="trailing" constant="20" symbolic="YES" id="X2R-8C-aMy"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="bottom" secondItem="J7f-YM-lIC" secondAttribute="bottom" constant="8" id="h5s-SO-V8I"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="centerY" secondItem="6R8-TP-6bQ" secondAttribute="centerY" id="h66-0z-11M"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="top" secondItem="n5z-RT-6cy" secondAttribute="top" id="uZe-3v-La0"/>
+                                                <constraint firstItem="J7f-YM-lIC" firstAttribute="leading" secondItem="6R8-TP-6bQ" secondAttribute="leadingMargin" constant="12" id="v2z-6e-tX5"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="centerX" secondItem="6R8-TP-6bQ" secondAttribute="centerX" id="zCZ-0I-KcR"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="ats-Tw-f7F" id="fWa-yI-OW2"/>
+                                            <outlet property="dateLabel" destination="J7f-YM-lIC" id="Mdt-NR-Wvu"/>
+                                            <outlet property="likeButton" destination="n5z-RT-6cy" id="iaw-4Y-Odx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -58,10 +85,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-34" id="CSL-dZ-QYZ"/>
-                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="JT4-lV-zya"/>
-                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PdZ-uu-vg4"/>
-                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="xpT-Pi-Sp7"/>
+                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6o6-bK-27j"/>
+                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GEC-ci-v6B"/>
+                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cQP-ft-lV2"/>
+                            <constraint firstItem="wT3-Vj-GNi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cyr-Vc-MWI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -74,7 +101,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0" width="1600" height="1059"/>
-        <image name="Active" width="42" height="42"/>
+        <image name="0" width="533.33331298828125" height="353"/>
+        <image name="like_button_on" width="42" height="42"/>
     </resources>
 </document>
