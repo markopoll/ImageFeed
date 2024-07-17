@@ -30,9 +30,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Tw-f7F" userLabel="cellImage">
                                                     <rect key="frame" x="16" y="4" width="361" height="216"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="361" id="uiM-Er-vhn"/>
-                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -50,22 +47,23 @@
                                                     <state key="normal" title="" image="like_button_on"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="like_button_on" title=""/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 октября 2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-YM-lIC" userLabel="dateLabel">
-                                                    <rect key="frame" x="31.999999999999993" y="196" width="100.33333333333331" height="16"/>
-                                                    <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26 октября 2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-YM-lIC" userLabel="dateLabel">
+                                                    <rect key="frame" x="23.999999999999993" y="196" width="105.33333333333331" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="J7f-YM-lIC" firstAttribute="leading" secondItem="ats-Tw-f7F" secondAttribute="leading" constant="8" id="8C6-ID-74b"/>
                                                 <constraint firstItem="ats-Tw-f7F" firstAttribute="trailing" secondItem="n5z-RT-6cy" secondAttribute="trailing" id="92N-7c-O8y"/>
-                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="top" secondItem="6R8-TP-6bQ" secondAttribute="topMargin" constant="-7" id="Tvd-8d-t3p"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J7f-YM-lIC" secondAttribute="trailing" constant="20" symbolic="YES" id="X2R-8C-aMy"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="top" secondItem="6R8-TP-6bQ" secondAttribute="top" constant="4" id="CKU-up-WgE"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="leading" secondItem="6R8-TP-6bQ" secondAttribute="leading" constant="16" id="I4Q-hn-ORI"/>
+                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J7f-YM-lIC" secondAttribute="trailing" constant="8" id="M4T-LB-Ezq"/>
+                                                <constraint firstAttribute="trailing" secondItem="ats-Tw-f7F" secondAttribute="trailing" constant="16" id="Vl7-YS-OFa"/>
+                                                <constraint firstAttribute="bottom" secondItem="ats-Tw-f7F" secondAttribute="bottom" constant="4" id="b6c-va-r50"/>
                                                 <constraint firstItem="ats-Tw-f7F" firstAttribute="bottom" secondItem="J7f-YM-lIC" secondAttribute="bottom" constant="8" id="h5s-SO-V8I"/>
-                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="centerY" secondItem="6R8-TP-6bQ" secondAttribute="centerY" id="h66-0z-11M"/>
                                                 <constraint firstItem="ats-Tw-f7F" firstAttribute="top" secondItem="n5z-RT-6cy" secondAttribute="top" id="uZe-3v-La0"/>
-                                                <constraint firstItem="J7f-YM-lIC" firstAttribute="leading" secondItem="6R8-TP-6bQ" secondAttribute="leadingMargin" constant="12" id="v2z-6e-tX5"/>
-                                                <constraint firstItem="ats-Tw-f7F" firstAttribute="centerX" secondItem="6R8-TP-6bQ" secondAttribute="centerX" id="zCZ-0I-KcR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
