@@ -8,13 +8,16 @@
 import UIKit
 
 final class ImagesListViewController: UIViewController  {
+    
     // MARK: - IB Outlets
+    
     @IBOutlet private var tableView: UITableView!
     
-    // MARK: - Public Properties
     // MARK: - Private Properties
+    
     private let photosName: [String] = Array(0..<20).map { "\($0)" }
     private let showSingleImageSegueIdentifier = "ShowSingleImage"
+    private let currentDate = Date()
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -22,18 +25,19 @@ final class ImagesListViewController: UIViewController  {
         return formatter
     } ()
     
-    // MARK: - Initializers
-    // MARK: - Overrides Methods
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.separatorInset = .zero
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 200
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
-     
-        
     }
+    
+    // MARK: - Overrides Methods
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showSingleImageSegueIdentifier {
             guard
@@ -51,9 +55,9 @@ final class ImagesListViewController: UIViewController  {
         }
     }
 }
-    // MARK: - IB Actions
-    // MARK: - Public Methods
-    // MARK: - Extensions
+
+// MARK: - UITableViewDataSource
+
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photosName.count
@@ -70,6 +74,8 @@ extension ImagesListViewController: UITableViewDataSource {
         return imageListCell
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -89,6 +95,7 @@ extension ImagesListViewController: UITableViewDelegate {
         return cellHeight
     }
 }
+// MARK: - UIViewController
 
 extension ImagesListViewController {
     private func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
@@ -97,7 +104,7 @@ extension ImagesListViewController {
         }
         
         cell.cellImage.image = image
-        cell.dateLabel.text = dateFormatter.string(from: Date())
+        cell.dateLabel.text = dateFormatter.string(from: currentDate)
         
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "like_button_off") : UIImage(named: "like_button_on")
