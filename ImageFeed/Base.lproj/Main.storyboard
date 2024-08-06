@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-3042" y="849"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tap Bar Controller-->
         <scene sceneID="9U9-mq-4mO">
             <objects>
-                <tabBarController id="MTq-Zg-lnR" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="MTq-Zg-lnR" customClass="TapBarController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HA5-ms-82B">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
