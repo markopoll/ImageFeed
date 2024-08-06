@@ -63,8 +63,7 @@ extension SplashViewController {
                   let viewController = navigationController.viewControllers[0] as? AuthViewController
             else {
                
-                assertionFailure("Failed to prepare for")
-//                \(showAuthenticationScreenSegueIdentifier)"
+                assertionFailure("Failed to prepare for \(showAuthenticationScreenSegueIdentifier)")
                 return
             }
             viewController.delegate = self

@@ -82,7 +82,7 @@
         <!--Auth View Controller-->
         <scene sceneID="Tvs-5q-hxx">
             <objects>
-                <viewController id="Leq-Um-JPo" customClass="AuthViewController" sceneMemberID="viewController">
+                <viewController id="Leq-Um-JPo" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dLT-ax-AvT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
